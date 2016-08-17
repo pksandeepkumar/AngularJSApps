@@ -1,0 +1,8 @@
+{
+    "name": "FirstHTML5Application",
+    "version": "1.0.0",
+    "keywords": ["util", "functional", "server", "client", "browser"],
+    "author": "sandeep",
+    "contributors": [],
+    "dependencies": {}
+}
