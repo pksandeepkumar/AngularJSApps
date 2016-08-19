@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-app.controller("catControl", function ($scope) {
-                $scope.categorys = [
+'use strict';
+angular.module('category', []).controller('catControl', function($scope, $location, $rootScope) {
+//    alert("In control");
+    
+   $scope.categorys = [
                     {name: 'Breakfast', description: 'Description 1',
                         image: 'http://192.168.10.14:8089//img/a4a993c7-e450-4387-9d8d-35bc1aa1100c.jpg'},
                     {name: 'Soups', description: 'Description 1',
@@ -32,7 +34,15 @@ app.controller("catControl", function ($scope) {
                         image: 'http://192.168.10.14:8089//img/44cb067e-69b6-46ab-9a31-4b1b81e1b17f.jpg'}
 
                 ];
-            });
+                
+                $scope.go = function (path, item) {
+                   
+        console.log(path + 'Item neme:' + item);
+        $rootScope.itemName = item;
+        $location.path(path);
+    };
+}); 
+
             
 
 
